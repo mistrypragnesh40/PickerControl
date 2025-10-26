@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:BasePopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:PickerControl.Control"
+    xmlns:views="clr-namespace:MauiPopup.Views;assembly=MauiPopup"
+    HideSoftInputOnTapped="True"
+    HorizontalOptions="Fill"
+    VerticalOptions="End"
+    x:DataType="pages:SearchablePickerControlViewModel"
+    x:Class="PickerControl.Control.SearchablePickerControlView">
+    <Grid Padding="10" RowDefinitions="Auto,Auto,*,Auto" RowSpacing="10">
+        <ContentView  Content="{Binding SearchModel.HeaderView}"/>
+        
+        <Border StrokeShape="RoundRectangle 10" Grid.Row="1">
+            <Entry  Text="{Binding SearchText}"  Grid.Row="1"/>
+        </Border>
+
+
+        <ScrollView Grid.Row="2" HeightRequest="{Binding SearchModel.HeightRequest}"
+                Scrolled="ScrollView_OnScrolled">
+            <VerticalStackLayout Spacing="10" BindableLayout.ItemTemplate="{Binding SearchModel.SearchableItemTemplate}"
+                                 BindableLayout.ItemsSource="{Binding SearchResults}">
+            </VerticalStackLayout>
+        </ScrollView>
+        <ActivityIndicator IsRunning="{Binding IsLoadingMoreRecords}" Grid.Row="2" VerticalOptions="End" HorizontalOptions="Center" />
+        <ActivityIndicator IsRunning="{Binding IsBusy}" Grid.Row="2"  HorizontalOptions="Center" />
+
+
+
+        <Button IsVisible="{Binding SearchModel.IsSubmitButtonVisible}"
+                Command="{Binding SubmitCommand}"
+                Grid.Row="3"
+                Text="Save"/>
+
+    </Grid>
+</views:BasePopupPage>
