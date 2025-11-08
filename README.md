@@ -2,7 +2,7 @@
 
 A customizable, modern, and powerful **Searchable Picker Control** for .NET MAUI that supports **multiple selection**, **server-side pagination**, and **custom templates** — all wrapped in a sleek popup interface.
 
-<img width="300" height="600" alt="Simulator Screenshot - iPhone 17 - 2025-11-08 at 18 39 13" src="https://github.com/user-attachments/assets/c46c0c1d-d0bb-48b6-a633-dc26223791f8" />
+![2025-11-0820-02-53-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ccabba7e-02b0-42d7-b1a8-810ec2c47e0f)
 
 
 ## ✨ Features
