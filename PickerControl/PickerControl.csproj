@@ -18,6 +18,7 @@
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageId>Plugin.Maui.SearchablePicker</PackageId>
         <Title>Plugin.Maui.SearchablePicker</Title>
         <Authors>Pragnesh Mistry</Authors>
@@ -27,6 +28,7 @@
         <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
         <PackageTags>MAUI, NETMAUI, Picker, SearchablePicker, CrossPlatform, UIControl, Mobile</PackageTags>
         <PackageReleaseNotes>Initial release with searchable picker functionality</PackageReleaseNotes>
+        <RepositoryUrl>https://github.com/mistrypragnesh40/PickerControl</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
@@ -37,6 +39,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
         <None Include="icon.png" Pack="true" PackagePath="\" />
     </ItemGroup>
 
